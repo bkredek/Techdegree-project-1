@@ -4,13 +4,17 @@ import UIKit
 
 //Teams, experience players and The Leauge
 
-var teams: [[String: Any]] = []
+var teamDragons: [[String: Any]] = []
+
+var teamSharks: [[String: Any]] = []
+
+var teamRaptors: [[String: Any]] = []
 
 var experiencedPlayers: [[String: Any]] = []
 
 var inexperiencedPlayers: [[String: Any]] = []
 
-var TheLeauge: [[String: Any]] = [["name": "Joe Smith",
+var Players: [[String: Any]] = [["name": "Joe Smith",
                                    "height": 42,
                                    "experience": true,
                                    "guardian name": "Jim and Jan Smith"],
@@ -83,6 +87,14 @@ var TheLeauge: [[String: Any]] = [["name": "Joe Smith",
                                    "experience": true,
                                    "guardian name": "Hyman and Rachel Krustofski"]]
 
+//Creating Leauge
+
+var TheLeauge: [[String: Any]] = []
+
+for player in Players{
+    TheLeauge.append(player)
+}
+TheLeauge
 //Putting experience and inexperience players in right collections
 
 for player in TheLeauge {
@@ -98,7 +110,41 @@ for player in TheLeauge {
     }
 }
 
+//Putting players in teams
 
+for experiencedPlayer in experiencedPlayers {
+
+    if teamDragons.count < experiencedPlayers.count/3
+    {
+        teamDragons.append(experiencedPlayer)
+    }
+    else if teamRaptors.count < experiencedPlayers.count/3
+    {
+        teamRaptors.append(experiencedPlayer)
+    }
+    else
+    {
+        teamSharks.append(experiencedPlayer)
+    }
+
+}
+
+for inexperiencedPlayer in inexperiencedPlayers {
+    
+    if teamDragons.count < TheLeauge.count/3
+    {
+        teamDragons.append(inexperiencedPlayer)
+    }
+    else if teamRaptors.count < TheLeauge.count/3
+    {
+        teamRaptors.append(inexperiencedPlayer)
+    }
+    else
+    {
+        teamSharks.append(inexperiencedPlayer)
+    }
+    
+}
 
 
 
