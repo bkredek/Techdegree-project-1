@@ -94,7 +94,7 @@ var TheLeauge: [[String: Any]] = []
 for player in Players{
     TheLeauge.append(player)
 }
-TheLeauge
+
 //Putting experience and inexperience players in right collections
 
 for player in TheLeauge {
@@ -112,52 +112,33 @@ for player in TheLeauge {
 
 //Putting players in teams
 
-for experiencedPlayer in experiencedPlayers {
 
-    if teamDragons.count < experiencedPlayers.count/3
-    {
-        teamDragons.append(experiencedPlayer)
-    }
-    else if teamRaptors.count < experiencedPlayers.count/3
-    {
-        teamRaptors.append(experiencedPlayer)
-    }
-    else
-    {
-        teamSharks.append(experiencedPlayer)
-    }
 
+for player in experiencedPlayers
+{
+    if teamDragons.count < experiencedPlayers.count / 3{
+        teamDragons.append(player)
+    }else if teamSharks.count < experiencedPlayers.count / 3{
+        teamSharks.append(player)
+    }else{
+        teamRaptors.append(player)
+    }
 }
 
-for inexperiencedPlayer in inexperiencedPlayers {
-    
-    if teamDragons.count < TheLeauge.count/3
-    {
-        teamDragons.append(inexperiencedPlayer)
+for player in inexperiencedPlayers
+{
+    if teamDragons.count < TheLeauge.count / 3{
+        teamDragons.append(player)
+    }else if teamSharks.count < TheLeauge.count / 3{
+        teamSharks.append(player)
+    }else{
+        teamRaptors.append(player)
     }
-    else if teamRaptors.count < TheLeauge.count/3
-    {
-        teamRaptors.append(inexperiencedPlayer)
-    }
-    else
-    {
-        teamSharks.append(inexperiencedPlayer)
-    }
-    
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
+teamRaptors
+teamDragons
+teamSharks
 
 
 

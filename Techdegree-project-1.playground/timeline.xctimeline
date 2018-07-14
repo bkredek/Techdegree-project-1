@@ -3,27 +3,52 @@
    version = "3.0">
    <TimelineItems>
       <LoggerValueHistoryTimelineItem
-         documentLocation = "file:///Users/bartekkredek/Documents/Code/Techdegree-project-1/Techdegree-project-1.playground#CharacterRangeLen=52&amp;CharacterRangeLoc=5066&amp;EndingColumnNumber=51&amp;EndingLineNumber=116&amp;StartingColumnNumber=0&amp;StartingLineNumber=115&amp;Timestamp=551215858.613081"
+         documentLocation = "file:///Users/bartekkredek/Documents/Code/Techdegree-project-1/Techdegree-project-1.playground#CharacterRangeLen=593&amp;CharacterRangeLoc=5013&amp;EndingColumnNumber=0&amp;EndingLineNumber=159&amp;StartingColumnNumber=0&amp;StartingLineNumber=116&amp;Timestamp=553261000.846995"
          selectedRepresentationIndex = "0"
          shouldTrackSuperviewWidth = "NO">
       </LoggerValueHistoryTimelineItem>
       <LoggerValueHistoryTimelineItem
-         documentLocation = "file:///Users/bartekkredek/Documents/Code/Techdegree-project-1/Techdegree-project-1.playground#CharacterRangeLen=52&amp;CharacterRangeLoc=5066&amp;EndingColumnNumber=51&amp;EndingLineNumber=116&amp;StartingColumnNumber=0&amp;StartingLineNumber=115&amp;Timestamp=551215858.613199"
+         documentLocation = "file:///Users/bartekkredek/Documents/Code/Techdegree-project-1/Techdegree-project-1.playground#CharacterRangeLen=593&amp;CharacterRangeLoc=5013&amp;EndingColumnNumber=0&amp;EndingLineNumber=159&amp;StartingColumnNumber=0&amp;StartingLineNumber=116&amp;Timestamp=553261000.84709"
          selectedRepresentationIndex = "0"
          shouldTrackSuperviewWidth = "NO">
       </LoggerValueHistoryTimelineItem>
       <LoggerValueHistoryTimelineItem
-         documentLocation = "file:///Users/bartekkredek/Documents/Code/Techdegree-project-1/Techdegree-project-1.playground#CharacterRangeLen=10&amp;CharacterRangeLoc=5319&amp;EndingColumnNumber=18&amp;EndingLineNumber=126&amp;StartingColumnNumber=8&amp;StartingLineNumber=126&amp;Timestamp=551215858.6132849"
+         documentLocation = "file:///Users/bartekkredek/Documents/Code/Techdegree-project-1/Techdegree-project-1.playground#CharacterRangeLen=593&amp;CharacterRangeLoc=5013&amp;EndingColumnNumber=0&amp;EndingLineNumber=159&amp;StartingColumnNumber=0&amp;StartingLineNumber=116&amp;Timestamp=553261000.84716"
          selectedRepresentationIndex = "0"
          shouldTrackSuperviewWidth = "NO">
       </LoggerValueHistoryTimelineItem>
       <LoggerValueHistoryTimelineItem
-         documentLocation = "file:///Users/bartekkredek/Documents/Code/Techdegree-project-1/Techdegree-project-1.playground#CharacterRangeLen=11&amp;CharacterRangeLoc=5252&amp;EndingColumnNumber=19&amp;EndingLineNumber=122&amp;StartingColumnNumber=8&amp;StartingLineNumber=122&amp;Timestamp=551215858.613368"
+         documentLocation = "file:///Users/bartekkredek/Documents/Code/Techdegree-project-1/Techdegree-project-1.playground#CharacterRangeLen=593&amp;CharacterRangeLoc=5013&amp;EndingColumnNumber=0&amp;EndingLineNumber=159&amp;StartingColumnNumber=0&amp;StartingLineNumber=116&amp;Timestamp=553261000.8472281"
          selectedRepresentationIndex = "0"
          shouldTrackSuperviewWidth = "NO">
       </LoggerValueHistoryTimelineItem>
       <LoggerValueHistoryTimelineItem
-         documentLocation = "file:///Users/bartekkredek/Documents/Code/Techdegree-project-1/Techdegree-project-1.playground#CharacterRangeLen=11&amp;CharacterRangeLoc=5135&amp;EndingColumnNumber=19&amp;EndingLineNumber=118&amp;StartingColumnNumber=8&amp;StartingLineNumber=118&amp;Timestamp=551215858.613447"
+         documentLocation = "file:///Users/bartekkredek/Documents/Code/Techdegree-project-1/Techdegree-project-1.playground#CharacterRangeLen=593&amp;CharacterRangeLoc=5013&amp;EndingColumnNumber=0&amp;EndingLineNumber=159&amp;StartingColumnNumber=0&amp;StartingLineNumber=116&amp;Timestamp=553261000.847293"
+         selectedRepresentationIndex = "0"
+         shouldTrackSuperviewWidth = "NO">
+      </LoggerValueHistoryTimelineItem>
+      <LoggerValueHistoryTimelineItem
+         documentLocation = "file:///Users/bartekkredek/Documents/Code/Techdegree-project-1/Techdegree-project-1.playground#CharacterRangeLen=593&amp;CharacterRangeLoc=5013&amp;EndingColumnNumber=0&amp;EndingLineNumber=159&amp;StartingColumnNumber=0&amp;StartingLineNumber=116&amp;Timestamp=553261000.8473589"
+         selectedRepresentationIndex = "0"
+         shouldTrackSuperviewWidth = "NO">
+      </LoggerValueHistoryTimelineItem>
+      <LoggerValueHistoryTimelineItem
+         documentLocation = "file:///Users/bartekkredek/Documents/Code/Techdegree-project-1/Techdegree-project-1.playground#CharacterRangeLen=9&amp;CharacterRangeLoc=4667&amp;EndingColumnNumber=15&amp;EndingLineNumber=94&amp;StartingColumnNumber=6&amp;StartingLineNumber=94&amp;Timestamp=553261000.847425"
+         selectedRepresentationIndex = "0"
+         shouldTrackSuperviewWidth = "NO">
+      </LoggerValueHistoryTimelineItem>
+      <LoggerValueHistoryTimelineItem
+         documentLocation = "file:///Users/bartekkredek/Documents/Code/Techdegree-project-1/Techdegree-project-1.playground#CharacterRangeLen=11&amp;CharacterRangeLoc=5554&amp;EndingColumnNumber=0&amp;EndingLineNumber=139&amp;StartingColumnNumber=1&amp;StartingLineNumber=138&amp;Timestamp=553261000.8474931"
+         selectedRepresentationIndex = "0"
+         shouldTrackSuperviewWidth = "NO">
+      </LoggerValueHistoryTimelineItem>
+      <LoggerValueHistoryTimelineItem
+         documentLocation = "file:///Users/bartekkredek/Documents/Code/Techdegree-project-1/Techdegree-project-1.playground#CharacterRangeLen=11&amp;CharacterRangeLoc=5566&amp;EndingColumnNumber=0&amp;EndingLineNumber=140&amp;StartingColumnNumber=1&amp;StartingLineNumber=139&amp;Timestamp=553261000.847559"
+         selectedRepresentationIndex = "0"
+         shouldTrackSuperviewWidth = "NO">
+      </LoggerValueHistoryTimelineItem>
+      <LoggerValueHistoryTimelineItem
+         documentLocation = "file:///Users/bartekkredek/Documents/Code/Techdegree-project-1/Techdegree-project-1.playground#CharacterRangeLen=10&amp;CharacterRangeLoc=5578&amp;EndingColumnNumber=0&amp;EndingLineNumber=141&amp;StartingColumnNumber=1&amp;StartingLineNumber=140&amp;Timestamp=553261000.8476239"
          selectedRepresentationIndex = "0"
          shouldTrackSuperviewWidth = "NO">
       </LoggerValueHistoryTimelineItem>
