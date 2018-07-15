@@ -191,6 +191,21 @@ func printLetters(){
     }
 }
 
+//Extra credits
+
+func avrHeight(of team: [[String: Any]]) -> Double{
+    
+    var avgTemp: Double = 0
+    
+    for player in team{
+        if let height = player["height"] as? Int{
+            avgTemp += Double(height)
+        }
+    }
+ 
+    return avgTemp / Double(team.count)
+}
+
 //Main program
 
 getExperiencedPlayer(from: Players)
@@ -199,7 +214,9 @@ makeALeague()
 makeLetters()
 printLetters()
 
-
+print("Average height of Raptors is: \(avrHeight(of: teamRaptors))")
+print("Average height of Sharks is: \(avrHeight(of: teamSharks))")
+print("Average height of Dragons is: \(avrHeight(of: teamDragons))")
 
 
 
