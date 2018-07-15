@@ -137,19 +137,19 @@ func putPlayersInTeams(){
 func makeLetters() -> [String]{
     for player in teamSharks{
         if let guardianName = player["guardian name"] as? String, let playerName = player["name"] as? String{
-            let letter = "Dear miss/mister \(guardianName), your child \(playerName) was assigned to Sharks team and first training is on \(teamSharksPractice)"
+            let letter = "Dear \(guardianName), \(playerName) was assigned to Sharks team and first training is on \(teamSharksPractice)"
             letters.append(letter)
         }
     }
     for player in teamDragons{
         if let guardianName = player["guardian name"] as? String, let playerName = player["name"] as? String{
-            let letter = "Dear miss/mister \(guardianName), your child \(playerName) was assigned to Dragons team and first training is on \(teamDragonsPractice)"
+            let letter = "Dear \(guardianName), \(playerName) was assigned to Dragons team and first training is on \(teamDragonsPractice)"
             letters.append(letter)
         }
     }
     for player in teamRaptors{
         if let guardianName = player["guardian name"] as? String, let playerName = player["name"] as? String{
-            let letter = "Dear miss/mister \(guardianName), your child \(playerName) was assigned to Raptors team and first training is on \(teamRaptorsPractice)"
+            let letter = "Dear \(guardianName), \(playerName) was assigned to Raptors team and first training is on \(teamRaptorsPractice)"
             letters.append(letter)
         }
     }
