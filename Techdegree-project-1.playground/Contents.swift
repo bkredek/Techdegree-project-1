@@ -101,6 +101,7 @@ var Players: [[String: Any]] = [player1, player2, player3, player4, player5, pla
 var theLeague: [[String: Any]] = []
 
 var letters:[String] = []
+
 //Putting players in experienced and inexperienced collection
 
 func getExperiencedPlayer(from Players: [[String: Any]]){
@@ -115,14 +116,18 @@ func getExperiencedPlayer(from Players: [[String: Any]]){
     }
 }
 
+//Putting players to the teams
+
 func putPlayersInTeams(){
     for player in experiencedPlayers{
         if teamRaptors.count < experiencedPlayers.count / teams.count{
             teamRaptors.append(player)
         }else if teamDragons.count < experiencedPlayers.count / teams.count{
             teamDragons.append(player)
-        }else{
+        }else if teamSharks.count < experiencedPlayers.count / teams.count{
             teamSharks.append(player)
+        }else{
+            print("There are too many players")
         }
     }
     for player in inexperiencedPlayers{
@@ -130,11 +135,15 @@ func putPlayersInTeams(){
             teamRaptors.append(player)
         }else if teamDragons.count < Players.count / teams.count{
             teamDragons.append(player)
-        }else{
+        }else if teamSharks.count < Players.count / teams.count{
             teamSharks.append(player)
+        }else{
+            print("There are too many players")
         }
     }
 }
+
+//Making a leauge
 
 func makeALeague(){
     for player in teamDragons{
@@ -154,19 +163,21 @@ func makeALeague(){
     }
 }
 
+//Creating 18 letters
+
 func makeLetters() -> [String]{
     for player in theLeague{
         var letter: String
         
         if let playerName = player["name"] as? String, let guardianName = player["guardian name"] as? String, let teamName = player["team"] as? String{
             if teamName == "Dragons"{
-                letter = "Dear \(guardianName), \(playerName) was assigned to \(teamName) and first training is \(teamDragonsPractice)"
+                letter = "Dear \(guardianName), \(playerName) was assigned to \(teamName) and first training is on \(teamDragonsPractice)"
                 letters.append(letter)
             }else if teamName == "Sharks"{
-                letter = "Dear \(guardianName), \(playerName) was assigned to \(teamName) and first training is \(teamSharksPractice)"
+                letter = "Dear \(guardianName), \(playerName) was assigned to \(teamName) and first training is on \(teamSharksPractice)"
                 letters.append(letter)
             }else{
-                letter = "Dear \(guardianName), \(playerName) was assigned to \(teamName) and first training is \(teamRaptorsPractice)"
+                letter = "Dear \(guardianName), \(playerName) was assigned to \(teamName) and first training is on \(teamRaptorsPractice)"
                 letters.append(letter)
             }
         }
@@ -180,6 +191,7 @@ func printLetters(){
     }
 }
 
+//Main program
 
 getExperiencedPlayer(from: Players)
 putPlayersInTeams()
