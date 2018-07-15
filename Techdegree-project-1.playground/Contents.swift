@@ -82,7 +82,7 @@ let teamDragonsPractice = "March 17, 1pm"
 let teamSharksPractice = "March 17, 3pm"
 let teamRaptorsPractice = "March 18, 1pm"
 
-//Teams
+//Teams and the league
 
 var teamDragons: [[String: Any]] = []
 
@@ -97,6 +97,8 @@ var experiencedPlayers: [[String: Any]] = []
 var inexperiencedPlayers: [[String: Any]] = []
 
 var Players: [[String: Any]] = [player1, player2, player3, player4, player5, player6, player7, player8, player9, player10, player11, player12, player13, player14, player15, player16, player17, player18]
+
+var theLeague: [[String: Any]] = []
 
 var letters:[String] = []
 //Putting players in experienced and inexperienced collection
@@ -134,23 +136,39 @@ func putPlayersInTeams(){
     }
 }
 
-func makeLetters() -> [String]{
-    for player in teamSharks{
-        if let guardianName = player["guardian name"] as? String, let playerName = player["name"] as? String{
-            let letter = "Dear \(guardianName), \(playerName) was assigned to Sharks team and first training is on \(teamSharksPractice)"
-            letters.append(letter)
-        }
-    }
+func makeALeague(){
     for player in teamDragons{
-        if let guardianName = player["guardian name"] as? String, let playerName = player["name"] as? String{
-            let letter = "Dear \(guardianName), \(playerName) was assigned to Dragons team and first training is on \(teamDragonsPractice)"
-            letters.append(letter)
-        }
+        var teamName = player
+        teamName["team"] = "Dragons"
+        theLeague.append(teamName)
+    }
+    for player in teamSharks{
+        var teamName = player
+        teamName["team"] = "Sharks"
+        theLeague.append(teamName)
     }
     for player in teamRaptors{
-        if let guardianName = player["guardian name"] as? String, let playerName = player["name"] as? String{
-            let letter = "Dear \(guardianName), \(playerName) was assigned to Raptors team and first training is on \(teamRaptorsPractice)"
-            letters.append(letter)
+        var teamName = player
+        teamName["team"] = "Raptors"
+        theLeague.append(teamName)
+    }
+}
+
+func makeLetters() -> [String]{
+    for player in theLeague{
+        var letter: String
+        
+        if let playerName = player["name"] as? String, let guardianName = player["guardian name"] as? String, let teamName = player["team"] as? String{
+            if teamName == "Dragons"{
+                letter = "Dear \(guardianName), \(playerName) was assigned to \(teamName) and first training is \(teamDragonsPractice)"
+                letters.append(letter)
+            }else if teamName == "Sharks"{
+                letter = "Dear \(guardianName), \(playerName) was assigned to \(teamName) and first training is \(teamSharksPractice)"
+                letters.append(letter)
+            }else{
+                letter = "Dear \(guardianName), \(playerName) was assigned to \(teamName) and first training is \(teamRaptorsPractice)"
+                letters.append(letter)
+            }
         }
     }
     return letters
@@ -165,9 +183,9 @@ func printLetters(){
 
 getExperiencedPlayer(from: Players)
 putPlayersInTeams()
+makeALeague()
 makeLetters()
 printLetters()
-
 
 
 
