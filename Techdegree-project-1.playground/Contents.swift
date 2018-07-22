@@ -115,32 +115,55 @@ func getExperiencedPlayer(from Players: [[String: Any]]){
         }
     }
 }
+//Sorting players according to height and printing teams avr height (Extra Credits)
 
-//Putting players to the teams
-
-func putPlayersInTeams(){
-    for player in experiencedPlayers{
-        if teamRaptors.count < experiencedPlayers.count / teams.count{
-            teamRaptors.append(player)
-        }else if teamDragons.count < experiencedPlayers.count / teams.count{
-            teamDragons.append(player)
-        }else if teamSharks.count < experiencedPlayers.count / teams.count{
-            teamSharks.append(player)
-        }else{
-            print("There are too many players")
+func sortPlayers(){
+    
+    experiencedPlayers.sort(by: {$0["height"] as! Int > $1["height"] as! Int})
+    inexperiencedPlayers.sort(by: {$0["height"] as! Int > $1["height"] as! Int})
+    inexperiencedPlayers.reverse()
+    
+}
+func avrHeight(of team: [[String: Any]]) -> Double{
+    
+    var avgTemp: Double = 0
+    
+    for player in team{
+        if let height = player["height"] as? Int{
+            avgTemp += Double(height)
         }
     }
-    for player in inexperiencedPlayers{
-        if teamRaptors.count < Players.count / teams.count{
-            teamRaptors.append(player)
-        }else if teamDragons.count < Players.count / teams.count{
+    
+    return avgTemp / Double(team.count)
+}
+
+func printAvgHeight(){
+    print("Average height of Raptors is: \(avrHeight(of: teamRaptors))")
+    print("Average height of Sharks is: \(avrHeight(of: teamSharks))")
+    print("Average height of Dragons is: \(avrHeight(of: teamDragons))")
+}
+
+//Putting players in experience and inexperience teams
+
+func putPlayerInTeam(from experience: [[String: Any]]){
+    for player in experience{
+        if teamRaptors.count > teamDragons.count{
             teamDragons.append(player)
-        }else if teamSharks.count < Players.count / teams.count{
+        }else if teamDragons.count > teamSharks.count{
             teamSharks.append(player)
         }else{
-            print("There are too many players")
+            teamRaptors.append(player)
         }
     }
+}
+
+//Making teams with sorted players
+
+func makeTeams(){
+    getExperiencedPlayer(from: Players)
+    sortPlayers()
+    putPlayerInTeam(from: experiencedPlayers)
+    putPlayerInTeam(from: inexperiencedPlayers)
 }
 
 //Making a leauge
@@ -171,13 +194,13 @@ func makeLetters() -> [String]{
         
         if let playerName = player["name"] as? String, let guardianName = player["guardian name"] as? String, let teamName = player["team"] as? String{
             if teamName == "Dragons"{
-                letter = "Dear \(guardianName), \(playerName) was assigned to \(teamName) and first training is on \(teamDragonsPractice)"
+                letter = "-------------------------------------------------------\nDear \(guardianName), \n \n\(playerName) was assigned to \(teamName) and first training is on \(teamDragonsPractice)\n-------------------------------------------------------"
                 letters.append(letter)
             }else if teamName == "Sharks"{
-                letter = "Dear \(guardianName), \(playerName) was assigned to \(teamName) and first training is on \(teamSharksPractice)"
+                letter = "-------------------------------------------------------\nDear \(guardianName), \n \n\(playerName) was assigned to \(teamName) and first training is on \(teamSharksPractice)\n-------------------------------------------------------"
                 letters.append(letter)
             }else{
-                letter = "Dear \(guardianName), \(playerName) was assigned to \(teamName) and first training is on \(teamRaptorsPractice)"
+                letter = "-------------------------------------------------------\nDear \(guardianName), \n \n\(playerName) was assigned to \(teamName) and first training is on \(teamRaptorsPractice)\n-------------------------------------------------------"
                 letters.append(letter)
             }
         }
@@ -191,32 +214,18 @@ func printLetters(){
     }
 }
 
-//Extra credits
 
-func avrHeight(of team: [[String: Any]]) -> Double{
-    
-    var avgTemp: Double = 0
-    
-    for player in team{
-        if let height = player["height"] as? Int{
-            avgTemp += Double(height)
-        }
-    }
- 
-    return avgTemp / Double(team.count)
-}
+
+
 
 //Main program
 
-getExperiencedPlayer(from: Players)
-putPlayersInTeams()
+makeTeams()
 makeALeague()
 makeLetters()
 printLetters()
+printAvgHeight()
 
-print("Average height of Raptors is: \(avrHeight(of: teamRaptors))")
-print("Average height of Sharks is: \(avrHeight(of: teamSharks))")
-print("Average height of Dragons is: \(avrHeight(of: teamDragons))")
 
 
 
