@@ -142,7 +142,7 @@ func printAvgHeight(){
     print("Average height of Dragons is: \(avrHeight(of: teamDragons))")
 }
 
-//Putting players in experience and inexperience teams
+//Putting players into teams
 
 func putPlayerInTeam(from experience: [[String: Any]]){
     for player in experience{
