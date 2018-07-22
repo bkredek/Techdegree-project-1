@@ -118,10 +118,12 @@ func getExperiencedPlayer(from Players: [[String: Any]]){
 
 func sortPlayers(){
     
-    experiencedPlayers.sort(by: {$0["height"] as! Int > $1["height"] as! Int})
-    inexperiencedPlayers.sort(by: {$0["height"] as! Int > $1["height"] as! Int})
-    inexperiencedPlayers.reverse()
-    
+    var tempBool: Bool = true
+    experiencedPlayers.sort(by: {if let pl1 = $0["height"] as? Int,let pl2 = $1["height"] as? Int{
+                                    tempBool = pl1 > pl2 }; return tempBool})
+    inexperiencedPlayers.sort(by: {if let pl1 = $0["height"] as? Int,let pl2 = $1["height"] as? Int{
+                                    tempBool = pl1 < pl2 }; return tempBool})
+
 }
 func avrHeight(of team: [[String: Any]]) -> Double{
     
