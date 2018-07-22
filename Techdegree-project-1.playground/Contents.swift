@@ -76,6 +76,7 @@ let player18: [String: Any] = ["name": "Herschel Krustofski",
                                "height": 45,
                                "experience": true,
                                "guardian name": "Hyman and Rachel Krustofski"]
+
 //Teams practice date
 
 let teamDragonsPractice = "March 17, 1pm"
@@ -89,8 +90,6 @@ var teamDragons: [[String: Any]] = []
 var teamSharks: [[String: Any]] = []
 
 var teamRaptors: [[String: Any]] = []
-
-var teams = [teamRaptors, teamDragons, teamSharks]
 
 var experiencedPlayers: [[String: Any]] = []
 
