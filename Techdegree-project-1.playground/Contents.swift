@@ -168,23 +168,17 @@ func makeTeams(){
 }
 
 //Making a leauge
-
-func makeALeague(){
+func giveName(to name: String){
     for player in teamDragons{
         var teamName = player
-        teamName["team"] = "Dragons"
+        teamName["team"] = name
         theLeague.append(teamName)
     }
-    for player in teamSharks{
-        var teamName = player
-        teamName["team"] = "Sharks"
-        theLeague.append(teamName)
-    }
-    for player in teamRaptors{
-        var teamName = player
-        teamName["team"] = "Raptors"
-        theLeague.append(teamName)
-    }
+}
+func makeALeague(){
+    giveName(to: "Dragons")
+    giveName(to: "Sharks")
+    giveName(to: "Raptors")
 }
 
 //Creating 18 letters
