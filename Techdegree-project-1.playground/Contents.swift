@@ -1,4 +1,4 @@
-//Tech Degree Project 1
+//Tech Degree Project 1 Bartlomiej Kredek
 
 import UIKit
 
@@ -220,7 +220,6 @@ makeALeague()
 makeLetters()
 printLetters()
 printAvgHeight()
-
 
 
 
